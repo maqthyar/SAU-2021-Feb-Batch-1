@@ -1,0 +1,5 @@
+Difference between == and ===
+
+== compares the two operands and return true if they are equal without considering their types.
+
+=== compares the two operands and return true if they are equal and there types are equal too.

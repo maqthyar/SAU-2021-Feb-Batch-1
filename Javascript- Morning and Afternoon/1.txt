@@ -1,0 +1,18 @@
+var add = (function () {
+	var counter = 0;
+	return function () { return counter += 1;}
+})();
+
+
+add();
+add();
+add();
+
+
+OUTPUT:
+
+1
+2
+3
+
+The reason for the above output is function definition can access all the variables declared around it. so when we return a function. along with the function, all the variables declared along with it are returned with it but the only function can access it. This is also known as closure property.
