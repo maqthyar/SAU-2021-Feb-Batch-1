@@ -1,0 +1,234 @@
+{
+	"info": {
+		"_postman_id": "5fa9f88c-e623-4bb3-82a3-2f95911ca728",
+		"name": "assignment-bookmyshow",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "post of movie",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"1\",\r\n    \"date\":1609997785187,\r\n    \"name\":\"Sholay\",\r\n    \"city\":[\"delhi\"]\r\n}\r\n"
+				},
+				"url": {
+					"raw": "localhost:8080/bookmyshow",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bookmyshow"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "post of movie",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"1\",\r\n    \"date\":1609997785187,\r\n    \"name\":\"Sholay\",\r\n    \"city\":[\"delhi\"]\r\n}\r\n"
+						},
+						"url": {
+							"raw": "localhost:8080/bookmyshow",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bookmyshow"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 18 Feb 2021 12:22:55 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"1\",\n    \"city\": [\n        \"delhi\"\n    ],\n    \"date\": \"2021-01-07T05:36:25.187+00:00\",\n    \"movie\": \"Sholay\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get By name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": [
+				{
+					"name": "Get By name",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/bookmyshow/movies/demons",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bookmyshow",
+								"movies",
+								"demons"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 18 Feb 2021 12:24:46 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"2\",\n    \"city\": [\n        \"mumbai\"\n    ],\n    \"date\": \"2021-01-07T05:36:25.187+00:00\",\n    \"movie\": \"demons\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get By City",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/bookmyshow/city/delhi",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bookmyshow",
+						"city",
+						"delhi"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get By City",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/bookmyshow/city/delhi",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bookmyshow",
+								"city",
+								"delhi"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 18 Feb 2021 12:27:09 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"1\",\n        \"city\": [\n            \"delhi\"\n        ],\n        \"date\": \"2021-01-07T05:36:25.187+00:00\",\n        \"movie\": \"Sholay\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Delete Movie",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/bookmyshow/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bookmyshow",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
