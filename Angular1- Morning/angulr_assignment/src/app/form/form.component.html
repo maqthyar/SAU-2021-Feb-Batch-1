@@ -1,0 +1,17 @@
+<div>
+  <form>
+    <input type="text"  name="item" (change)="helper()" [(ngModel)]="goalText">
+  </form>
+  <table>
+    <tr>
+      <th >character</th>
+      <th>Time</th>
+    </tr>
+    <div *ngFor="let item of logs">
+      <tr>
+        <td>{{item.value}}</td>
+        <td >{{item.time}}</td>
+      </tr>
+    </div>
+  </table>
+</div>
