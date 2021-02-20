@@ -1,0 +1,18 @@
+  <div> <form [formGroup]="modifyForm">
+        <mat-form-field appearance="fill">
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="title">
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>instructor</mat-label>
+            <input matInput formControlName="instructor">
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>Desc</mat-label>
+            <input matInput formControlName="desc">
+          </mat-form-field>
+          <button mat-raised-buton  color="primary" (click)="modifyList()">Save</button>
+        </form>
+</div>
