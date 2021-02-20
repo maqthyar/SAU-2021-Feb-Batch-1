@@ -1,3 +1,9 @@
+# Project features
+Add new session details
+List existing session details using Mat-Card 
+Update/Delete existing session details (At once we can update all the fields of a session execept for any one field )
+
+
 # AUSession
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.5.
